@@ -17,7 +17,7 @@ window.REGLAGES = {
   instagram: "",
 
   // Numéro WhatsApp au format international, sans +, sans espaces (Mauritanie = 222)
-  whatsapp: "22236883212",
+  whatsapp: "22236889212",
 
   // Adresse e-mail de contact (laisser vide pour masquer le bouton)
   email: "",
