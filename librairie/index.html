@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Wisdom Librairie</title>
+<meta name="description" content="Digital Wisdom : des e-books et ressources numériques pour développer vos connaissances en intelligence artificielle, finance personnelle, business et éducation. Téléchargement numérique après paiement.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Wisdom">
+<meta property="og:title" content="Digital Wisdom · Le savoir est le meilleur investissement">
+<meta property="og:description" content="Des e-books pratiques pour l'argent, l'IA, la famille et l'entrepreneuriat. Mobile Money ou carte, téléchargement après paiement.">
+<meta property="og:image" content="https://fanecheick364-cloud.github.io/librairie/og-image.jpg">
+<meta property="og:url" content="https://fanecheick364-cloud.github.io/librairie/">
+<link rel="canonical" href="https://fanecheick364-cloud.github.io/librairie/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Digital Wisdom, e-books et guides pratiques">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#080808">
+<meta name="robots" content="index, follow">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="../icone-180.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080808'/%3E%3Crect x='6' y='6' width='52' height='52' rx='10' fill='none' stroke='%23C8A96B' stroke-width='2'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='24' fill='%23C8A96B' text-anchor='middle'%3EDW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json" id="ld">{}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Maison d'édition numérique : noir profond, or champagne, papier. Mise en page éditoriale asymétrique, livres en volume. */
+  --ink:#080808; --ink2:#111111; --ink3:#191817; --gold:#C8A96B; --gold-soft:#E4D2A6; --paper:#F5F2EC; --grey:#999999;
+  --line:rgba(200,169,107,.20); --line2:rgba(245,242,236,.09);
+  --display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --body:"Manrope","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --r:10px; --wrap:1180px; --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.005em}
+h1{font-size:clamp(2.5rem,8.6vw,5.2rem)}
+h2{font-size:clamp(1.9rem,5.4vw,3.1rem)}
+h3{font-size:1.45rem}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.lead{color:#cfcabf;font-size:1.05rem;max-width:60ch}
+.muted{color:var(--grey)}
+.gold{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:var(--gold);color:#000;padding:8px 12px;border-radius:6px}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:var(--r);font-weight:600;font-size:.95rem;letter-spacing:.02em;border:1px solid transparent;cursor:pointer;transition:transform .35s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .35s;font-family:var(--body);text-align:center}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .35s var(--ease)}
+.btn:hover svg.arrow{transform:translateX(4px)}
+.btn-gold{background:linear-gradient(180deg,#d8bd84,#b8985a);color:#0b0906;box-shadow:0 10px 30px -12px rgba(200,169,107,.55)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(200,169,107,.75)}
+.btn-line{border-color:var(--line);color:var(--paper);background:rgba(255,255,255,.02)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold-soft);transform:translateY(-2px)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:.86rem}
+.btn-block{width:100%}
+
+/* En-tête */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(8,8,8,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line2)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.28rem;letter-spacing:.2em;font-weight:600;white-space:nowrap}
+.logo .mono{width:34px;height:34px;border:1px solid var(--gold);border-radius:8px;display:grid;place-items:center;color:var(--gold);font-size:.95rem;letter-spacing:0}
+.nav{display:none;align-items:center;gap:26px;font-size:.88rem;color:#d6d1c6}
+.nav a{position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.nav a[aria-current="page"]{color:var(--gold-soft)}
+.hdr .cta{display:none}
+.burger{width:46px;height:46px;border:1px solid var(--line);border-radius:10px;background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--paper)}
+.burger span{display:block;width:20px;height:1.5px;background:currentColor;position:relative;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:1.5px;background:var(--paper);transition:transform .35s var(--ease)}
+.burger span::before{transform:translateY(-6px)}.burger span::after{transform:translateY(6px)}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:rotate(-45deg)}
+.menu{position:fixed;inset:68px 0 0 0;z-index:49;background:rgba(8,8,8,.98);padding:26px 20px 40px;display:flex;flex-direction:column;gap:4px;overflow:auto;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .3s,transform .4s var(--ease)}
+.menu.open{opacity:1;transform:none;pointer-events:auto}
+.menu a.m{font-family:var(--display);font-size:1.9rem;padding:12px 0;border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;align-items:center}
+.menu a.m span{font-family:var(--body);font-size:.7rem;letter-spacing:.2em;color:var(--gold)}
+.menu .btn{margin-top:22px}
+@media(min-width:1000px){.nav{display:flex}.hdr .cta{display:inline-flex}.burger,.menu{display:none}}
+
+main{display:block;min-height:70vh}
+.view{animation:viewIn .55s var(--ease)}
+@keyframes viewIn{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.rise{animation:rise .8s var(--ease) both}
+@keyframes rise{from{transform:translateY(16px)}to{transform:none}}
+section{padding:64px 0}
+@media(min-width:800px){section{padding:96px 0}}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);width:120px;opacity:.7}
+
+/* Hero */
+.hero{position:relative;padding:120px 0 56px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(60% 55% at 78% 30%,rgba(200,169,107,.20),transparent 62%),
+  radial-gradient(40% 40% at 12% 90%,rgba(200,169,107,.08),transparent 70%),
+  linear-gradient(180deg,#0b0a09 0%,#080808 70%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.hero-grid{display:grid;gap:44px;align-items:center}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero .lead{margin-top:20px}
+.hero .actions{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.84rem;color:#bdb7ab}
+.hero .facts span{display:inline-flex;gap:8px;align-items:center}
+.hero .facts svg{width:16px;height:16px;color:var(--gold)}
+.scene{position:relative;height:380px;perspective:1400px;transition:transform .5s var(--ease)}
+.desk{position:absolute;left:4%;right:4%;bottom:26px;height:2px;background:linear-gradient(90deg,transparent,rgba(200,169,107,.5),transparent)}
+.desk::after{content:"";position:absolute;left:10%;right:10%;top:2px;height:70px;background:radial-gradient(50% 100% at 50% 0,rgba(200,169,107,.16),transparent 70%)}
+.tablet{position:absolute;left:50%;bottom:40px;width:210px;aspect-ratio:3/4;transform:translateX(-58%) rotateY(14deg) rotateX(4deg);border-radius:18px;background:#0e0e0e;border:1px solid #2a2824;padding:10px;box-shadow:0 40px 80px -30px #000,0 0 90px -20px rgba(200,169,107,.35);transform-style:preserve-3d}
+.tablet .cover{height:100%;border-radius:10px}
+.scene .book{position:absolute;bottom:40px}
+.scene .b1{right:3%;--w:120px;transform:rotateY(-30deg) rotateX(3deg)}
+.scene .b2{left:2%;--w:104px;transform:rotateY(26deg) rotateX(3deg)}
+.lamp{position:absolute;right:16%;top:0;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(228,210,166,.32),transparent 65%);filter:blur(6px);animation:glow 7s ease-in-out infinite}
+@keyframes glow{50%{opacity:.6;transform:scale(1.08)}}
+@media(min-width:900px){
+  .hero{padding:150px 0 90px}
+  .hero-grid{grid-template-columns:1.05fr .95fr}
+  .hero .actions{flex-direction:row}
+  .scene{height:520px}.tablet{width:290px}.scene .b1{--w:170px}.scene .b2{--w:150px}
+}
+
+/* Couvertures */
+.cover{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:2/3;padding:9% 9% 8%;border-radius:4px 8px 8px 4px;overflow:hidden;color:var(--paper);
+  background:radial-gradient(120% 80% at 0% 0%,color-mix(in srgb,var(--tint,#C8A96B) 34%,transparent),transparent 60%),linear-gradient(160deg,#171614,#0a0a0a 70%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.cover::before{content:"";position:absolute;inset:5%;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);border-radius:2px;pointer-events:none}
+.cover::after{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent);pointer-events:none}
+.cover.has-img{padding:0;background:#0d0d0d}.cover.has-img::before{display:none}.cover.has-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cover .c-cat{font-size:.5em;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;position:relative;z-index:1}
+.cover .c-mark{position:absolute;right:-4%;bottom:14%;font-family:var(--display);font-size:5.6em;line-height:.8;color:color-mix(in srgb,var(--tint,#C8A96B) 26%,transparent);font-weight:600;letter-spacing:-.04em;white-space:nowrap}
+.cover .c-title{font-family:var(--display);font-size:1.5em;line-height:1.02;font-weight:600;position:relative;z-index:1;text-wrap:balance}
+.cover .c-sub{font-size:.52em;color:#cfc9bc;margin-top:.9em;line-height:1.4;position:relative;z-index:1}
+.cover .c-foot{font-size:.46em;letter-spacing:.3em;color:var(--gold-soft);position:relative;z-index:1;display:flex;justify-content:space-between;gap:6px}
+.book{--w:200px;--d:26px;width:var(--w);aspect-ratio:2/3;position:relative;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(4deg);transition:transform .8s var(--ease);font-size:calc(var(--w)/11.5)}
+.book .cover{position:absolute;inset:0;transform:translateZ(calc(var(--d)/2));aspect-ratio:auto}
+.book::before{content:"";position:absolute;top:1.2%;left:0;height:97.6%;width:var(--d);transform:translateX(calc(var(--w) - var(--d)/2 - 2px)) rotateY(90deg);background:repeating-linear-gradient(90deg,#efe9dc 0 1px,#cfc7b6 1px 2.4px)}
+.book::after{content:"";position:absolute;inset:0;transform:translateZ(calc(var(--d)/-2));background:#060606;border-radius:4px 8px 8px 4px;box-shadow:-26px 30px 60px -10px rgba(0,0,0,.85),0 0 80px -30px rgba(200,169,107,.4)}
+.book-stage{perspective:1500px;display:grid;place-items:center;padding:30px 0}
+.book-stage:hover .book{transform:rotateY(-12deg) rotateX(2deg)}
+
+/* Grille catalogue */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 20px 14px;margin:0 -20px 22px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line2);font-size:.84rem;display:inline-flex;align-items:center;gap:8px;color:#d6d1c6;transition:border-color .3s,color .3s,background .3s;background:transparent;font-family:var(--body);cursor:pointer}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-current="true"]{background:var(--gold);color:#0b0906;border-color:var(--gold);font-weight:700}
+.chip small{font-size:.68rem;opacity:.7}
+.chip.soon{opacity:.5;cursor:default}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}}
+@media(min-width:1080px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;background:var(--ink2);border:1px solid var(--line2);border-radius:14px;overflow:hidden;transition:transform .5s var(--ease),border-color .4s,box-shadow .5s}
+.card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 30px 60px -30px #000,0 0 60px -30px rgba(200,169,107,.35)}
+.card .shot{padding:18px 18px 0;background:radial-gradient(90% 70% at 50% 0,rgba(200,169,107,.10),transparent 70%);display:block}
+.card .shot .cover{font-size:clamp(9px,2.6vw,13px);transition:transform .6s var(--ease);box-shadow:0 22px 40px -18px #000,inset 0 0 0 1px rgba(255,255,255,.05)}
+.card:hover .shot .cover{transform:translateY(-4px) rotate(-1.2deg)}
+.card .body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.18rem;line-height:1.15}
+.card .desc{font-size:.84rem;color:#b9b3a7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .meta{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.price b{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--gold-soft)}
+.price s{color:var(--grey);font-size:.86rem}
+.card .acts{display:grid;gap:8px;margin-top:auto;padding-top:8px}
+@media(max-width:420px){.card .body{padding:12px}.card .btn-sm{padding:0 10px;font-size:.78rem}}
+
+/* Blocs */
+.cols{display:grid;gap:22px}
+@media(min-width:860px){.cols.c2{grid-template-columns:1fr 1fr;gap:56px}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}}
+.tile{background:var(--ink2);border:1px solid var(--line2);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .4s,transform .5s var(--ease)}
+.tile:hover{border-color:var(--line);transform:translateY(-3px)}
+.tile .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold)}
+.tile .ic svg{width:22px;height:22px}
+.tile p{color:#bdb7ab;font-size:.92rem}
+.band{background:linear-gradient(180deg,#0c0b0a,#0f0e0c);border-block:1px solid var(--line2)}
+.quote{font-family:var(--display);font-size:clamp(1.5rem,4.4vw,2.5rem);line-height:1.2;font-style:italic;color:var(--gold-soft);max-width:22ch}
+.cat-list{display:grid;gap:0;border-top:1px solid var(--line2)}
+.cat-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line2);transition:padding .4s var(--ease),color .3s}
+a.cat-row:hover{padding-left:14px;color:var(--gold-soft)}
+.cat-row h3{font-size:clamp(1.3rem,4vw,1.9rem)}
+.cat-row span{font-size:.78rem;color:var(--grey);white-space:nowrap}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:26px;color:#bdb7ab;font-size:.95rem;background:rgba(200,169,107,.03)}
+.prov{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border:1px dashed var(--gold);color:var(--gold);padding:4px 10px;border-radius:999px;font-weight:700}
+
+/* Page produit */
+.crumb{font-size:.8rem;color:var(--grey);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.crumb a:hover{color:var(--gold)}
+.p-hero{padding:104px 0 40px;position:relative;isolation:isolate}
+.p-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 60% at 22% 40%,color-mix(in srgb,var(--tint,#C8A96B) 22%,transparent),transparent 65%)}
+.p-grid{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.p-hero{padding:140px 0 70px}.p-grid{grid-template-columns:.85fr 1.15fr;gap:60px}.p-grid .book{--w:300px}}
+.p-info{display:flex;flex-direction:column;gap:16px}
+.p-info h1{font-size:clamp(2.1rem,6.4vw,3.6rem)}
+.p-info .sub{font-size:1.08rem;color:#d6d1c6}
+.p-benefit{border-left:2px solid var(--gold);padding:4px 0 4px 16px;color:var(--gold-soft);font-family:var(--display);font-size:1.3rem;line-height:1.3;font-style:italic}
+.p-info .price b{font-size:2.3rem}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;padding:7px 12px;border:1px solid var(--line2);border-radius:999px;color:#d6d1c6}
+.badge svg{width:15px;height:15px;color:var(--gold)}
+.note{font-size:.8rem;color:var(--grey)}
+.qa{display:grid;gap:14px}
+@media(min-width:860px){.qa{grid-template-columns:1fr 1fr}}
+.qa .tile h3{font-size:1.3rem}
+.qa ul,.plain{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.qa li,.plain li{position:relative;padding-left:22px;color:#cfcabf;font-size:.93rem}
+.qa li::before,.plain li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--gold)}
+.toc{counter-reset:ch;display:grid;gap:0;border-top:1px solid var(--line2)}
+.toc li{counter-increment:ch;list-style:none;display:grid;grid-template-columns:54px 1fr;gap:6px 10px;padding:18px 0;border-bottom:1px solid var(--line2)}
+.toc li::before{content:counter(ch,decimal-leading-zero);font-family:var(--display);font-size:1.6rem;color:var(--gold);line-height:1}
+.toc b{font-weight:600;display:block}
+.toc span{color:#b9b3a7;font-size:.9rem;grid-column:2}
+.pages{display:flex;gap:16px;overflow-x:auto;padding:6px 20px 18px;margin:0 -20px;scroll-snap-type:x mandatory}
+.page{flex:none;width:232px;aspect-ratio:3/4;background:var(--paper);color:#1b1a18;border-radius:6px;padding:22px 20px;scroll-snap-align:center;display:flex;flex-direction:column;gap:10px;box-shadow:0 26px 50px -24px #000;transition:transform .5s var(--ease)}
+.page:hover{transform:translateY(-6px) rotate(-.6deg)}
+.page .pn{font-size:.62rem;letter-spacing:.2em;color:#8a7a52;text-transform:uppercase;font-weight:700}
+.page h4{font-family:var(--display);font-size:1.3rem;line-height:1.1;margin:0;font-weight:600}
+.page p{font-size:.72rem;line-height:1.5;color:#44413b}
+.page i{display:block;height:5px;border-radius:3px;background:#dcd6c8;margin-top:5px}
+.page .foot{margin-top:auto;font-size:.56rem;letter-spacing:.2em;color:#8a7a52;display:flex;justify-content:space-between}
+details{border-bottom:1px solid var(--line2)}
+details summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:var(--display);font-size:1.3rem;line-height:1.2}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:translateY(-70%) rotate(45deg);transition:transform .4s var(--ease)}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{padding:0 0 20px;color:#cfcabf;max-width:70ch}
+details[open] p{animation:rise .5s var(--ease)}
+.final{text-align:left;border:1px solid var(--line);border-radius:18px;padding:34px 24px;background:radial-gradient(80% 120% at 100% 0,rgba(200,169,107,.16),transparent 60%),var(--ink2);display:grid;gap:18px}
+@media(min-width:860px){.final{padding:60px;grid-template-columns:1.3fr .7fr;align-items:center}}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(10,10,10,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;justify-content:space-between}
+.buybar .price b{font-size:1.25rem}.buybar .btn{min-height:48px;padding:0 18px;flex:1;max-width:260px}
+@media(min-width:900px){.buybar{display:none}}
+.has-buybar footer{padding-bottom:90px}
+
+/* Pages texte */
+.doc{padding:120px 0 70px}
+.doc .wrap{max-width:820px}
+.doc h1{font-size:clamp(2.2rem,7vw,3.6rem);margin:10px 0 18px}
+.doc h2{font-size:1.6rem;margin:34px 0 10px}
+.doc p,.doc li{color:#cfcabf;max-width:70ch}
+.doc p+p{margin-top:12px}
+.doc ul{padding-left:20px;display:grid;gap:6px}
+.field{display:grid;gap:6px}
+.field label{font-size:.8rem;color:#d6d1c6;letter-spacing:.04em}
+.field input,.field textarea,.field select{background:var(--ink2);border:1px solid var(--line2);border-radius:10px;color:var(--paper);font:inherit;padding:14px;width:100%}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold);outline:none}
+
+footer{border-top:1px solid var(--line2);padding:54px 0 34px;background:#060606;font-size:.9rem;color:#bdb7ab}
+.f-grid{display:grid;gap:30px}
+@media(min-width:800px){.f-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer h4{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;font-family:var(--body)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a:hover{color:var(--gold-soft)}
+.f-end{margin-top:36px;padding-top:20px;border-top:1px solid var(--line2);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:.78rem;color:var(--grey)}
+.tools{display:grid;gap:12px;margin-bottom:18px}
+@media(min-width:760px){.tools{grid-template-columns:1fr 240px}}
+.search{position:relative}.search svg{position:absolute;left:14px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--grey)}
+.search input{padding-left:44px}
+.steps{display:grid;gap:18px;counter-reset:st}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{counter-increment:st;position:relative;padding:26px 24px 24px;border:1px solid var(--line2);border-radius:14px;background:var(--ink2)}
+.step::before{content:counter(st,decimal-leading-zero);font-family:var(--display);font-size:3rem;line-height:1;color:var(--gold);opacity:.85;display:block;margin-bottom:14px}
+.step h3{margin-bottom:8px}.step p{color:#bdb7ab;font-size:.92rem}
+.upsell{display:grid;gap:18px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:24px;background:linear-gradient(120deg,rgba(142,123,214,.10),rgba(200,169,107,.08))}
+@media(min-width:860px){.upsell{grid-template-columns:auto 1fr auto;padding:30px 36px}}
+.upsell .mini{display:flex;gap:10px}.upsell .mini .cover{width:74px;font-size:6.6px}
+.share{background:transparent;border:0;color:var(--grey);font:inherit;font-size:.82rem;cursor:pointer;display:inline-flex;gap:8px;align-items:center;padding:6px 0}
+.share:hover{color:var(--gold)}.share svg{width:16px;height:16px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--gold);color:#0b0906;padding:10px 18px;border-radius:999px;font-weight:700;font-size:.85rem;opacity:0;pointer-events:none;transition:all .35s var(--ease);z-index:60}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Digital Wisdom, accueil"><span class="mono">DW</span>DIGITAL WISDOM</a>
+    <nav class="nav" aria-label="Navigation principale" id="nav"></nav>
+    <a class="btn btn-gold btn-sm cta" href="#catalogue">Découvrir nos livres</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu"></div>
+<main id="app" tabindex="-1"></main>
+<footer id="footer"></footer>
+<noscript><div style="padding:120px 20px;color:#F5F2EC">Ce site nécessite JavaScript. Boutique : <a href="https://fitstznk.mychariow.shop">fitstznk.mychariow.shop</a></div></noscript>
+
+<script>
+/* =====================================================================
+   CONFIGURATION — tout ce qui se modifie se trouve ici.
+   Pour ajouter un e-book : copiez un objet de BOOKS et changez ses champs.
+   Le lien d'achat = STORE + champ "chariow" (identifiant du produit sur Chariow).
+   ===================================================================== */
+const STORE = "https://fitstznk.mychariow.shop/";
+const WHATSAPP = { display: "+222 36 88 92 12", link: "https://wa.me/22236889212" };
+const CATS = [
+  { id:"ia", name:"Intelligence artificielle", tint:"#8E7BD6" },
+  { id:"business", name:"Business et entrepreneuriat", tint:"#C8A96B" },
+  { id:"perso", name:"Développement personnel", tint:"#6FA8A0" },
+  { id:"finance", name:"Finance personnelle", tint:"#7FAF7A" },
+  { id:"marketing", name:"Marketing digital", tint:"#D08A5B" },
+  { id:"productivite", name:"Productivité", tint:"#9AA7B8" },
+  { id:"education", name:"Éducation et compétences", tint:"#C97C8A" },
+  { id:"couple", name:"Famille et couple", tint:"#B5566E" }
+];
+const BOOKS = [
+ { id:"ia-qui-paie", img:"couv-ia-qui-paie.webp", chariow:"ia-qui-paie", cat:"ia", mark:"30", isNew:true,
+   title:"L'IA qui paie", subtitle:"30 services à vendre avec ChatGPT depuis ton téléphone",
+   price:4000, format:"PDF · 31 pages",
+   desc:"Un guide pratique qui te montre quoi vendre, à qui, à quel prix, et comment trouver tes premiers clients.",
+   benefit:"Tu as un téléphone et ChatGPT ? Tu as déjà ce qu'il faut pour proposer des services.",
+   problem:"Autour de toi, des commerçants veulent des statuts WhatsApp qui vendent, des étudiants cherchent un CV propre, des restaurants veulent un menu en deux langues. Ils ne savent pas utiliser l'IA.",
+   useful:"Le guide te donne une liste précise de services, la cible et le prix en FCFA pour chacun, ainsi que les messages pour contacter tes premiers clients.",
+   audience:["Étudiants et jeunes diplômés","Personnes qui cherchent un revenu en plus","Commerçants qui veulent comprendre l'IA","Aucune compétence technique nécessaire"],
+   results:["Savoir exactement quels services proposer","Fixer tes prix avec la méthode des 3 prix","Contacter tes premiers clients sur WhatsApp et Facebook","Suivre un plan d'action jour par jour pendant 14 jours"],
+   contents:[["30 services à vendre","CV, statuts WhatsApp, logos, menus, traductions, plans d'affaires… avec la cible et le prix en FCFA."],["40 prompts prêts à copier","Utilisables avec ChatGPT, Claude ou Gemini."],["Les messages de prospection","Les textes exacts pour contacter tes premiers clients."],["La méthode des 3 prix","Pour vendre sans brader ton travail."],["Le plan d'action de 14 jours","Une étape concrète par jour."]],
+   legal:"Ce guide te donne une méthode. Tes résultats dépendent de ton travail." },
+ { id:"revenus-ia", img:"couv-revenus-ia.webp", chariow:"revenus-ia", cat:"ia", mark:"IA",
+   title:"Revenus & IA", subtitle:"Le guide complet pour créer tes revenus avec ChatGPT et l'intelligence artificielle",
+   price:5000, oldPrice:8000, format:"PDF · 43 pages",
+   desc:"13 chapitres pour maîtriser l'IA et choisir ton modèle de revenus, avec 60 prompts et un plan de 30 jours.",
+   benefit:"Tout le monde parle de l'IA. Ce guide te montre comment l'utiliser, pas à pas, même sans connaissances en informatique.",
+   problem:"Très peu de gens savent utiliser l'IA pour créer un revenu. On teste, on s'amuse, puis on ne sait pas quoi en faire.",
+   useful:"Le guide couvre quatre modèles de revenus et t'aide à choisir celui qui te correspond, avec des prompts prêts à copier.",
+   audience:["Débutants complets en intelligence artificielle","Personnes qui veulent structurer une activité","Lecteurs de « L'IA qui paie » qui veulent aller plus loin"],
+   results:["Comprendre les usages concrets de l'IA","Choisir un modèle : services locaux, freelance international, produits numériques ou création de contenu","Disposer de 60 prompts prêts à l'emploi","Avancer avec un plan d'action de 30 jours"],
+   contents:[["13 chapitres progressifs","De la prise en main de l'IA au choix de ton modèle de revenus."],["Quatre modèles de revenus","Services locaux, freelance international, produits numériques, création de contenu."],["60 prompts prêts à copier","Classés pour être utilisés immédiatement."],["Le plan d'action de 30 jours","Pour passer de la lecture à la pratique."]],
+   legal:"Aucun revenu n'est garanti : ce guide te donne une méthode, tes résultats dépendent de ton travail." },
+ { id:"pack-ia", chariow:"obtenir-le-pack-complet", cat:"ia", mark:"2",
+   title:"Pack IA", subtitle:"L'IA qui paie + Revenus & IA, les deux livres réunis",
+   price:7000, format:"Pack de 2 PDF",
+   desc:"Le duo complet pour apprendre à créer des revenus avec l'IA, du premier client à la stratégie à long terme.",
+   benefit:"Démarrer vite avec le premier livre, aller plus loin avec le second.",
+   problem:"Acheter les livres séparément revient plus cher, et il est difficile de savoir par lequel commencer.",
+   useful:"Le pack réunit le guide de démarrage et le guide complet. Les deux livres sont téléchargeables après le paiement.",
+   audience:["Personnes qui veulent la méthode complète","Débutants qui veulent un parcours en deux temps"],
+   results:["30 services à vendre et un plan de 14 jours","13 chapitres, 60 prompts et un plan de 30 jours","Un prix inférieur à l'achat des deux livres séparément"],
+   contents:[["L'IA qui paie","30 services à vendre avec ChatGPT, 40 prompts, les prix en FCFA, plan de 14 jours."],["Revenus & IA","13 chapitres, quatre modèles de revenus, 60 prompts, plan de 30 jours."]],
+   legal:"Aucun revenu n'est garanti : ces guides te donnent une méthode, tes résultats dépendent de ton travail." },
+ { id:"construire-au-pays", img:"couv-construire-au-pays.webp", chariow:"construire-au-pays", cat:"business", mark:"79", isNew:true,
+   title:"Construire au pays sans se faire arnaquer", subtitle:"Le guide de la diaspora",
+   price:15000, format:"PDF · 79 pages + Excel",
+   desc:"Une méthode pour acheter un terrain, faire construire et suivre un chantier depuis l'étranger.",
+   benefit:"Votre maison au pays mérite mieux que « quelqu'un de confiance ». Elle mérite une méthode.",
+   problem:"L'argent envoyé pour un chantier qui n'avance pas, le terrain réclamé par un tiers, le promoteur qui encaisse des acomptes, la maison fissurée à la première saison des pluies.",
+   useful:"Le guide repose sur quatre principes : vérifier avant de payer, écrire avant de commencer, payer ce qui est fait, et séparer celui qui exécute de celui qui contrôle.",
+   audience:["Personnes vivant loin de leur pays","Projets d'achat de terrain ou de construction","Chantiers déjà commencés à sécuriser","Méthode valable dans toute l'Afrique francophone"],
+   results:["Reconnaître les 7 pièges et leur parade","Vérifier un terrain en 12 points","Comparer des devis ligne par ligne","Payer par étapes vérifiées et garder la trace de chaque envoi","Suivre le chantier à distance avec rapports, photos datées et vidéos"],
+   contents:[["Le guide complet","79 pages, 15 chapitres."],["Les papiers d'un terrain","Titre foncier, bail, ACD, ADU, permis d'occuper, lettre d'attribution, avec un tableau pour le Sénégal, la Côte d'Ivoire, le Cameroun et le Mali."],["10 checklists imprimables","Dont les 12 vérifications avant d'acheter et les 8 questions à poser à tout promoteur."],["8 messages types","Architecte, entreprise, notaire, famille."],["Plan d'action de 90 jours","Les étapes dans l'ordre."],["Bonus : tableau Excel de suivi","Budget, comparaison de devis, échéancier, journal des paiements, tableau de bord."]],
+   legal:"Guide éducatif : il ne remplace pas l'avis d'un notaire, d'un avocat, d'un architecte ou d'un ingénieur. Informations par pays vérifiées en novembre 2026." },
+ { id:"ultimate-web-pack", chariow:"ultimate-web-pack-10-templates-sites-web", cat:"business", mark:"10",
+   title:"Ultimate Web Pack", subtitle:"10 sites web professionnels prêts à l'emploi",
+   price:8000, format:"ZIP · HTML, CSS, JavaScript",
+   desc:"Dix modèles de sites à personnaliser pour lancer un projet sans partir de zéro.",
+   benefit:"Vos idées méritent une présence digitale professionnelle.",
+   problem:"Créer un site professionnel en partant d'une page blanche demande du temps et des compétences.",
+   useful:"Le pack fournit dix modèles complets, adaptés au mobile et à l'ordinateur, avec un guide d'installation en français.",
+   audience:["Entrepreneurs et créateurs de projets","Freelances et agences digitales","Développeurs et débutants"],
+   results:["Choisir le modèle qui correspond à votre projet","Personnaliser les textes, les images et les couleurs","Mettre votre site en ligne à l'aide du guide"],
+   contents:[["10 modèles de sites","Boutique e-commerce, restaurant, immobilier, portfolio, agence digitale, fitness, beauté et coiffure, éducation, agence de voyage, landing page SaaS."],["Fichiers HTML, CSS et JavaScript","Codes personnalisables."],["Design adapté à tous les écrans","Mobile et ordinateur."],["Guide d'installation","En français."]] },
+ { id:"arreter-de-trop-penser", img:"couv-arreter-de-trop-penser.webp", chariow:"arreter-de-trop-penser", cat:"perso", mark:"21", isNew:true,
+   title:"Arrêter de trop penser", subtitle:"La méthode en 21 jours pour calmer ton mental",
+   price:5000, format:"PDF · 60 pages + carnet",
+   desc:"Des outils simples, issus des thérapies cognitives et comportementales, pour désapprendre l'habitude de ruminer.",
+   benefit:"Ta tête rejoue tout en boucle ? C'est une habitude, et elle se désapprend.",
+   problem:"Il est 1 heure du matin. Tu devrais dormir, mais ta tête rejoue la conversation de l'après-midi et imagine le pire pour demain. Une décision te prend des semaines.",
+   useful:"Le livre réunit des outils issus des thérapies cognitives et comportementales (TCC) et un programme de 21 jours, de 10 à 25 minutes par jour.",
+   audience:["Étudiants et jeunes actifs","Parents et entrepreneurs","Toute personne dont la tête « ne s'arrête pas »"],
+   results:["Comprendre pourquoi ton cerveau tourne en boucle","Utiliser le rendez-vous des soucis et le tri des soucis","Vérifier tes pensées avec les 5 questions de recul","Décider sans tourner en rond (règle des 10/10/10)","Calmer le corps pour calmer la tête, y compris la nuit"],
+   contents:[["Le livre","60 pages, 16 chapitres."],["31 techniques et exercices","Dont 15 exercices guidés."],["Le programme de 21 jours","De 10 à 25 minutes par jour."],["La fiche SOS","À garder dans ton téléphone."],["30 questions pour prendre du recul","En annexe."],["Bonus : le carnet imprimable","32 pages pour suivre les 21 jours."]],
+   legal:"Ce livre est un outil d'auto-assistance. Il ne remplace pas un médecin ou un psychologue, et il t'indique clairement quand consulter." },
+ { id:"libre-financierement", img:"couv-independance-argent.webp", chariow:"independance-argent", cat:"finance", mark:"12",
+   title:"Libre financièrement", subtitle:"Gérer, épargner, multiplier tes revenus et construire ton indépendance",
+   price:5000, format:"PDF · 35 pages",
+   desc:"Le chemin complet vers la liberté financière, étape par étape, avec un plan sur 12 mois.",
+   benefit:"La liberté financière est le résultat de décisions simples, répétées dans le temps.",
+   problem:"La peur de la fin du mois, d'une maladie ou d'une perte d'emploi, et l'idée que l'indépendance financière serait réservée aux gros salaires.",
+   useful:"Le livre te fait faire ton bilan, construire ton budget et ton fonds d'urgence, puis aborder les revenus complémentaires et les bases de l'investissement.",
+   audience:["Salariés et indépendants","Personnes qui veulent sortir des dettes","Lecteurs qui découvrent l'investissement en Afrique francophone"],
+   results:["Te situer parmi les 5 niveaux de la liberté financière","Appliquer « payer d'abord soi-même » et la méthode des 3 comptes","Construire un fonds d'urgence","Reconnaître et éviter les arnaques","Suivre ton plan sur 12 mois"],
+   contents:[["Un livre de 14 chapitres","35 pages."],["Bilan et budget","Valeur nette, taux d'épargne, actifs et passifs, méthode des 3 comptes."],["Dettes et crédit","Sortir des dettes et utiliser le crédit intelligemment."],["Revenus","Augmenter ton revenu principal, les 7 sources de revenus, lancer une activité secondaire."],["Investissement","Risque, diversification, intérêts composés ; épargne, obligations, BRVM, immobilier, tontines."],["Exercices et plan sur 12 mois","Tableaux à remplir."]],
+   legal:"Livre éducatif : il ne constitue pas un conseil en investissement personnalisé." },
+ { id:"argent-sous-controle", img:"couv-argent-sous-controle.webp", chariow:"argent-sous-controle", cat:"finance", mark:"5",
+   title:"Mon argent sous contrôle", subtitle:"Le système budget 30 jours + tableau Excel",
+   price:3500, format:"PDF · 18 pages + Excel",
+   desc:"Un système simple, pensé pour la vie réelle en Afrique : salaire modeste, solidarité familiale, tontines, Mobile Money.",
+   benefit:"Le 10 du mois, ton salaire a déjà disparu ? Ce n'est pas seulement une question de montant.",
+   problem:"Crédit, transport, petites dépenses, demandes de la famille, cotisations, imprévus : sans plan, l'argent part avant que tu t'en rendes compte.",
+   useful:"Le guide explique la méthode des 5 enveloppes ; le tableau Excel calcule ce qu'il te reste dans chacune.",
+   audience:["Salariés et étudiants","Commerçants","Jeunes couples"],
+   results:["Savoir où part ton argent","Répartir ton revenu en 5 enveloppes","Épargner même avec un petit revenu","Dire non sans blesser"],
+   contents:[["Le guide PDF","18 pages : méthode des 5 enveloppes, épargne, dettes."],["Le tableau Excel automatique","Tu notes tes dépenses, il calcule le reste de chaque enveloppe."],["Le calculateur d'objectifs","Combien épargner chaque mois pour ton projet."],["Le défi 30 jours","Une petite action par jour."],["Des fiches à remplir","Pour ceux qui préfèrent le papier."]],
+   legal:"Ce guide propose une méthode d'organisation personnelle. Il ne remplace pas un conseil financier professionnel." },
+ { id:"pack-vendeur-pro", chariow:"pack-vendeur-pro", cat:"marketing", mark:"30",
+   title:"Pack Vendeur Pro", subtitle:"30 modèles pour vendre sur WhatsApp et TikTok",
+   price:5000, oldPrice:7000, format:"Studio numérique · export PNG",
+   desc:"30 modèles élégants pour présenter vos produits comme une vraie marque, sans designer et sans abonnement.",
+   benefit:"Présentez vos produits comme une vraie marque.",
+   problem:"Des visuels amateurs font perdre des ventes, et faire appel à un designer ou payer un abonnement n'est pas toujours possible.",
+   useful:"Le Studio fonctionne hors ligne, sur ordinateur et sur téléphone : vous changez le texte, le prix et la photo, puis vous exportez en PNG.",
+   audience:["Vendeurs sur WhatsApp","Boutiques en ligne et créateurs TikTok","Mode, parfums, cosmétiques, accessoires, alimentation, services"],
+   results:["Renseigner votre boutique une seule fois","Personnaliser un modèle en quelques gestes","Exporter en PNG haute résolution et publier"],
+   contents:[["8 statuts WhatsApp","1080 × 1920."],["8 posts réseaux sociaux","1080 × 1080."],["6 publicités produit","1080 × 1350."],["4 bannières","Boutique, en-tête Facebook, promotion, bienvenue."],["4 catalogues et menus avec prix","Format A4."],["Bonus","20 prompts IA en français et un tutoriel de 5 minutes."]],
+   legal:"Les modèles contiennent des exemples fictifs à remplacer par vos informations. Ils se personnalisent dans le Studio ; ils ne sont pas fournis en fichiers Canva ou Photoshop." },
+ { id:"amour-qui-dure", img:"couv-amour-qui-dure.webp", chariow:"amour-qui-dure", cat:"couple", mark:"13",
+   title:"Un amour qui dure", subtitle:"Le guide pour réussir son mariage",
+   price:4000, format:"PDF · 33 pages",
+   desc:"Beaucoup de couples ne se séparent pas parce qu'ils ont cessé de s'aimer, mais parce qu'ils n'ont jamais appris à s'aimer au quotidien.",
+   benefit:"S'aimer au quotidien, cela s'apprend.",
+   problem:"Les mêmes disputes reviennent, les silences s'installent, l'argent, la belle-famille ou le téléphone créent des tensions, et la fatigue éteint la complicité.",
+   useful:"Chaque chapitre contient des exercices à faire à deux, et un plan de 30 jours aide à installer de nouvelles habitudes.",
+   audience:["Fiancés","Jeunes mariés","Couples qui veulent se retrouver"],
+   results:["Communiquer vraiment : écoute active et formule en « je »","Se disputer sans se détruire et savoir réparer","Parler d'argent sans conflit","Gérer les belles-familles avec respect et fermeté","Garder la tendresse au fil des années"],
+   contents:[["Les fondations d'un couple solide","Les 4 piliers et le « compte émotionnel »."],["Communiquer et traverser les conflits","Les 4 comportements à bannir et l'art de la réparation."],["L'argent et les familles","Parler d'argent, gérer les belles-familles."],["Le quotidien","Partager les tâches, devenir parents sans perdre le couple."],["Confiance et crises","Jalousie, téléphone, pardonner et reconstruire."],["Un plan de 30 jours","Et des exercices à deux dans chaque chapitre."]],
+   legal:"En cas de crise profonde, un conseiller conjugal ou un professionnel est recommandé. En cas de violence, la sécurité passe avant tout." },
+ { id:"elever-sans-crier", img:"couv-elever-sans-crier.webp", chariow:"elever-sans-crier", cat:"education", mark:"0–15",
+   title:"Élever sans crier", subtitle:"Éduquer son enfant intelligemment, de 0 à 15 ans",
+   price:4000, format:"PDF · 35 pages",
+   desc:"Des méthodes simples pour éduquer avec fermeté et bienveillance, sans cris ni coups.",
+   benefit:"Personne ne nous apprend à être parent. Il existe pourtant des méthodes simples.",
+   problem:"Tu cries, tu menaces, tu répètes dix fois la même chose, et rien ne change.",
+   useful:"Chaque chapitre contient des exercices et des outils pratiques, de la petite enfance à l'adolescence.",
+   audience:["Mamans et papas","Grands-parents","Toute personne qui élève un enfant"],
+   results:["Comprendre pourquoi ton enfant fait des crises","Poser des limites sans crier ni frapper","Accompagner les colères et les émotions","Fixer des règles pour les écrans","Traverser l'adolescence sans rupture"],
+   contents:[["Un livre de 14 chapitres","35 pages."],["Le développement de 0 à 15 ans","Les grandes étapes et le cerveau de l'enfant."],["Le lien et la confiance","Le « temps spécial » de 15 minutes, la confiance en soi."],["Limites et communication","Parler pour que ton enfant écoute, autonomie selon l'âge."],["École, écrans, protection","Réussite scolaire, sécurité en ligne, harcèlement."],["Un plan de 30 jours","Des exercices dans chaque chapitre."]] }
+];
+const FAQ = [
+ ["Comment acheter le livre ?","Cliquez sur « Acheter maintenant ». Vous êtes redirigé vers la page du livre sur notre boutique Chariow, où vous finalisez la commande. Le paiement se fait par Mobile Money ou par carte."],
+ ["Comment recevoir mon e-book ?","Le produit est numérique : après la confirmation de votre paiement, Chariow vous donne accès au téléchargement. Aucun envoi postal n'est effectué."],
+ ["Dans quel format est-il disponible ?","Le format de chaque produit est indiqué sur sa page : PDF pour les livres, fichier Excel pour les tableaux, ZIP pour les packs de fichiers."],
+ ["Puis-je le consulter sur mon téléphone ?","Oui. Les livres au format PDF se lisent sur téléphone Android et iPhone avec n'importe quel lecteur PDF."],
+ ["Puis-je le consulter sur ordinateur ?","Oui. Les fichiers s'ouvrent sur ordinateur, tablette et téléphone. Les tableaux Excel nécessitent un tableur."],
+ ["Comment contacter le support ?","Écrivez-nous sur WhatsApp au " + WHATSAPP.display + ", en indiquant le livre concerné et l'adresse e-mail utilisée pour la commande."]
+];
+/* ===================== FIN DE LA CONFIGURATION ===================== */
+
+const $ = s => document.querySelector(s);
+const cat = id => CATS.find(c => c.id === id);
+const fcfa = n => n.toLocaleString("fr-FR").replace(/ | /g, " ") + " FCFA";
+const buy = b => STORE + b.chariow + "?utm_source=site-digital-wisdom&utm_medium=librairie&utm_campaign=" + encodeURIComponent(b.id);
+const I = {
+  arrow:'<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  dl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></svg>',
+  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+  card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l5 5 9-10"/></svg>',
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
+  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"/><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></svg>',
+  layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>'
+};
+const cover = b => b.img ? `<div class="cover has-img" style="--tint:${cat(b.cat).tint}"><img src="../${b.img}" alt="Couverture : ${b.title.replace(/"/g, "")}" width="600" height="900" loading="lazy" decoding="async"></div>` : `<div class="cover" style="--tint:${cat(b.cat).tint}"><div class="c-cat">${cat(b.cat).name}</div><div class="c-mark" aria-hidden="true">${b.mark}</div><div><div class="c-title">${b.title}</div><div class="c-sub">${b.subtitle}</div></div><div class="c-foot"><span>DIGITAL WISDOM</span><span>E-BOOK</span></div></div>`;
+const book3d = (b, cls = "") => `<div class="book ${cls}" style="--tint:${cat(b.cat).tint}">${cover(b)}</div>`;
+const priceHtml = b => `<div class="price"><b>${fcfa(b.price)}</b>${b.oldPrice ? `<s aria-label="Ancien prix">${fcfa(b.oldPrice)}</s>` : ""}</div>`;
+const buyBtn = (b, cls = "btn-gold", label = "Acheter maintenant") => `<a class="btn ${cls}" href="${buy(b)}" target="_blank" rel="noopener" data-buy="${b.id}">${label} ${I.arrow}</a>`;
+const card = b => `<article class="card"><a class="shot" href="#livre-${b.id}" aria-label="${b.title}">${cover(b)}</a><div class="body">
+  <div class="meta">${b.format}</div><h3><a href="#livre-${b.id}">${b.title}</a></h3><p class="desc">${b.desc}</p>${priceHtml(b)}
+  <div class="acts"><a class="btn btn-line btn-sm" href="#livre-${b.id}">Découvrir le livre</a>${buyBtn(b, "btn-gold btn-sm")}</div></div></article>`;
+const faqHtml = list => list.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+const trust = () => `<div class="cols c4">
+  <div class="tile"><div class="ic">${I.card}</div><h3>Paiement sur Chariow</h3><p>La commande et le paiement (Mobile Money ou carte) sont traités par la plateforme Chariow. Ce site ne collecte aucune donnée bancaire.</p></div>
+  <div class="tile"><div class="ic">${I.dl}</div><h3>Livraison numérique</h3><p>Aucun envoi postal. L'accès au téléchargement est donné par Chariow après la confirmation du paiement.</p></div>
+  <div class="tile"><div class="ic">${I.chat}</div><h3>Assistance</h3><p>Une question avant ou après l'achat ? Écrivez-nous sur WhatsApp au ${WHATSAPP.display}.</p></div>
+  <div class="tile"><div class="ic">${I.eye}</div><h3>Descriptions transparentes</h3><p>Chaque page indique le format, le contenu et les limites du produit. Aucun résultat n'est promis.</p></div></div>`;
+
+/* ---------- Vues ---------- */
+function vHome(){
+  const f = id => BOOKS.find(b => b.id === id);
+  const news = BOOKS.filter(b => b.isNew);
+  return `<section class="hero"><div class="wrap hero-grid">
+    <div><p class="eyebrow rise">Maison d'édition numérique</p>
+      <h1 class="rise" style="margin-top:14px;animation-delay:.08s">Le savoir est le meilleur <em>investissement.</em></h1>
+      <p class="lead rise" style="animation-delay:.16s">Découvrez des ressources numériques conçues pour développer vos connaissances, améliorer vos compétences et transformer vos idées en résultats.</p>
+      <div class="actions rise" style="animation-delay:.24s"><a class="btn btn-gold" href="#catalogue">Explorer les e-books ${I.arrow}</a><a class="btn btn-line" href="#nouveautes">Découvrir nos nouveautés</a></div>
+      <div class="facts"><span>${I.book}${BOOKS.length} titres disponibles</span><span>${I.dl}Téléchargement numérique</span><span>${I.phone}Lisible sur téléphone</span></div></div>
+    <div class="scene" id="scene" aria-hidden="true"><div class="lamp"></div>${book3d(f("construire-au-pays"), "b2")}<div class="tablet">${cover(f("ia-qui-paie"))}</div>${book3d(f("libre-financierement"), "b1")}<div class="desk"></div></div>
+  </div></section>
+
+  <section id="nouveautes"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Nouveautés</p><h2>Les derniers titres de la maison</h2><div class="rule"></div></div>
+    <div class="grid">${news.concat(BOOKS.filter(b => !b.isNew).slice(0, 4 - news.length)).map(card).join("")}</div></div></section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Comment acheter</p><h2>Trois étapes, quelques minutes</h2><div class="rule"></div></div>
+    <div class="steps"><div class="step rv"><h3>Choisissez votre livre</h3><p>Consultez la page du livre : contenu, format, public visé et prix.</p></div>
+    <div class="step rv"><h3>Payez sur Chariow</h3><p>Le bouton « Acheter maintenant » ouvre la page de commande. Paiement par Mobile Money ou par carte.</p></div>
+    <div class="step rv"><h3>Téléchargez</h3><p>Après la confirmation du paiement, Chariow vous donne accès au fichier, lisible sur téléphone et ordinateur.</p></div></div></div></section>
+
+  <section class="band"><div class="wrap cols c2"><div class="rv"><p class="eyebrow">Catégories</p><h2 style="margin:14px 0 18px">Huit domaines, une même exigence</h2><p class="lead">Chaque livre est écrit pour être appliqué : des méthodes, des plans d'action et des outils à remplir.</p><a class="btn btn-line" style="margin-top:26px" href="#catalogue">Voir tout le catalogue ${I.arrow}</a></div>
+    <div class="cat-list rv">${CATS.map(c => { const n = BOOKS.filter(b => b.cat === c.id).length; return n ? `<a class="cat-row" href="#cat-${c.id}"><h3>${c.name}</h3><span>${n} titre${n > 1 ? "s" : ""}</span></a>` : `<div class="cat-row" style="opacity:.55"><h3>${c.name}</h3><span>Bientôt</span></div>`; }).join("")}</div></div></section>
+
+  <section><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Nos e-books</p><h2>Le catalogue</h2><div class="rule"></div></div>
+    <div class="grid">${BOOKS.slice(0, 8).map(card).join("")}</div>
+    <p style="margin-top:30px"><a class="btn btn-line" href="#catalogue">Voir les ${BOOKS.length} titres ${I.arrow}</a></p></div></section>
+
+  <section class="band"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Pourquoi Digital Wisdom</p><h2>Une boutique claire, du choix au téléchargement</h2><div class="rule"></div></div>${trust()}</div></section>
+
+  <section><div class="wrap cols c2"><div class="rv"><p class="eyebrow">La maison</p><p class="quote" style="margin-top:16px">« Nous croyons que le savoir est l'investissement le plus rentable. »</p></div>
+    <div class="rv" style="display:grid;gap:16px;align-content:start"><p class="lead">Digital Wisdom publie des livres numériques pratiques, pensés pour les lecteurs d'Afrique francophone et de la diaspora : prix en FCFA, exemples locaux, lecture sur téléphone.</p><p class="muted">Les sujets vont de l'intelligence artificielle à la finance personnelle, en passant par l'éducation et l'entrepreneuriat.</p><p><a class="btn btn-line" href="#a-propos">À propos de la maison ${I.arrow}</a></p></div></div></section>
+
+  <section class="band"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Avis des lecteurs</p><h2>Vos retours</h2><div class="rule"></div></div>
+    <div class="empty">Aucun avis n'a encore été publié sur la boutique. Les avis laissés par les acheteurs sur Chariow apparaîtront ici. Nous ne publions pas d'avis inventés.</div></div></section>
+
+  <section><div class="wrap cols c2"><div class="rv"><p class="eyebrow">Questions fréquentes</p><h2 style="margin:14px 0 18px">Avant d'acheter</h2><p class="lead">Les réponses aux questions les plus courantes sur l'achat et la réception des livres.</p><a class="btn btn-line" style="margin-top:26px" href="#faq">Toute la FAQ ${I.arrow}</a></div><div class="rv">${faqHtml(FAQ.slice(0, 4))}</div></div></section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="final rv"><div><p class="eyebrow">Commencer</p><h2 style="margin:12px 0 12px">Choisissez votre prochain livre</h2><p class="lead">${BOOKS.length} titres pour apprendre, s'organiser et entreprendre. Téléchargement numérique après paiement sur Chariow.</p></div><a class="btn btn-gold" href="#catalogue">Découvrir nos livres ${I.arrow}</a></div></div></section>`;
+}
+function vCatalogue(filter){
+  const list = filter ? BOOKS.filter(b => b.cat === filter) : BOOKS;
+  const c = filter && cat(filter);
+  return `<section class="doc" style="padding-bottom:40px"><div class="wrap" style="max-width:var(--wrap)">
+    <p class="eyebrow">Catalogue</p><h1>${c ? c.name : "Nos e-books"}</h1>
+    <p class="lead" style="margin-bottom:26px">${list.length} titre${list.length > 1 ? "s" : ""}${c ? " dans cette catégorie" : " disponibles"}. Les prix sont indiqués en francs CFA.</p>
+    <div class="chips" role="navigation" aria-label="Catégories"><a class="chip" href="#catalogue" ${!filter ? 'aria-current="true"' : ""}>Tous <small>${BOOKS.length}</small></a>
+    ${CATS.map(k => { const n = BOOKS.filter(b => b.cat === k.id).length; return n ? `<a class="chip" href="#cat-${k.id}" ${filter === k.id ? 'aria-current="true"' : ""}>${k.name} <small>${n}</small></a>` : `<span class="chip soon">${k.name} <small>bientôt</small></span>`; }).join("")}</div>
+    <div class="tools"><div class="field search"><label for="q" class="skip">Rechercher un livre</label>${I.search}<input id="q" type="search" placeholder="Rechercher un titre, un sujet…" autocomplete="off"></div>
+    <div class="field"><label for="sort" class="skip">Trier</label><select id="sort"><option value="">Ordre de la maison</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option><option value="az">Titre de A à Z</option></select></div></div>
+    <p class="muted" id="count" aria-live="polite" style="font-size:.85rem;margin-bottom:14px"></p>
+    <div class="grid" id="cgrid" data-filter="${filter || ""}">${list.map(card).join("")}</div></div></section>
+    <section class="band"><div class="wrap">${trust()}</div></section>`;
+}
+function vBook(b){
+  const c = cat(b.cat), toc = b.contents || [];
+  const benefits = [[I.phone, "Lisible partout", "Téléphone Android, iPhone, tablette et ordinateur."], [I.dl, "Accès numérique", "Téléchargement donné par Chariow après la confirmation du paiement."], [I.layers, "Orienté pratique", toc.length ? `${toc.length} éléments inclus, détaillés sur cette page.` : "Une méthode à appliquer pas à pas."], [I.chat, "Support WhatsApp", "Une personne vous répond au " + WHATSAPP.display + "."]];
+  const prov = `<div class="empty"><span class="prov">Information provisoire</span><p style="margin-top:12px">La présentation détaillée de ce livre (public, sommaire, ressources incluses) n'a pas encore été fournie par l'éditeur. Consultez la page du livre sur Chariow ou contactez-nous sur WhatsApp avant d'acheter.</p></div>`;
+  return `<section class="p-hero" style="--tint:${c.tint}"><div class="wrap">
+    <nav class="crumb" aria-label="Fil d'Ariane"><a href="#accueil">Accueil</a>/<a href="#catalogue">Nos e-books</a>/<a href="#cat-${c.id}">${c.name}</a></nav>
+    <div class="p-grid"><div class="book-stage">${book3d(b)}</div>
+    <div class="p-info"><p class="eyebrow">${c.name}</p><h1>${b.title}</h1><p class="sub">${b.subtitle}</p>
+      <p class="p-benefit">${b.benefit}</p>${priceHtml(b)}
+      <div style="display:grid;gap:10px;max-width:420px">${buyBtn(b, "btn-gold btn-block")}<a class="btn btn-line btn-block" href="#contenu">Voir ce que contient le livre</a></div>
+      <div class="badges"><span class="badge">${I.dl}Téléchargement numérique</span><span class="badge">${I.book}${b.format}</span><span class="badge">${I.card}Mobile Money ou carte</span></div>
+      <p class="note">Achat finalisé sur la boutique Chariow de Digital Wisdom. L'accès au fichier est donné après la confirmation du paiement.</p>
+      <button class="share" type="button" data-share>${I.link}Copier le lien de ce livre</button></div></div></div></section>
+
+  <section class="band"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Présentation</p><h2>Pourquoi ce livre</h2><div class="rule"></div></div>
+    ${b.provisional ? prov : `<div class="qa">
+      <div class="tile rv"><h3>Quel problème résout-il ?</h3><p>${b.problem}</p></div>
+      <div class="tile rv"><h3>Pourquoi est-il utile ?</h3><p>${b.useful}</p></div>
+      <div class="tile rv"><h3>À qui s'adresse-t-il ?</h3><ul>${b.audience.map(x => `<li>${x}</li>`).join("")}</ul></div>
+      <div class="tile rv"><h3>Ce que vous saurez faire</h3><ul>${b.results.map(x => `<li>${x}</li>`).join("")}</ul></div></div>`}
+    ${b.legal ? `<p class="note" style="margin-top:20px">${b.legal}</p>` : ""}</div></section>
+
+  <section id="contenu"><div class="wrap cols c2"><div class="rv"><p class="eyebrow">Contenu</p><h2 style="margin:14px 0 16px">Ce que contient le livre</h2><p class="lead">${b.desc}</p><p class="badge" style="margin-top:20px">${I.book}${b.format}</p></div>
+    <div class="rv">${toc.length ? `<ol class="toc" style="margin:0;padding:0">${toc.map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`).join("")}</ol>` : prov}</div></div></section>
+
+  <section class="band"><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Avantages</p><h2>Ce que vous obtenez</h2><div class="rule"></div></div>
+    <div class="cols c4">${benefits.map(([ic, t, d]) => `<div class="tile rv"><div class="ic">${ic}</div><h3>${t}</h3><p>${d}</p></div>`).join("")}</div></div></section>
+
+  ${toc.length ? `<section><div class="wrap"><div class="sec-head rv"><p class="eyebrow">Aperçu</p><h2>À l'intérieur</h2><p class="muted" style="max-width:62ch">Aperçu illustratif de l'organisation du contenu, établi à partir du sommaire. Les pages réelles sont dans le fichier livré.</p></div>
+    <div class="pages">${toc.slice(0, 6).map(([t, d], i) => `<div class="page"><div class="pn">Partie ${i + 1}</div><h4>${t}</h4><p>${d}</p><i style="width:92%"></i><i style="width:78%"></i><i style="width:86%"></i><i style="width:60%"></i><div class="foot"><span>DIGITAL WISDOM</span><span>${String(i + 1).padStart(2, "0")}</span></div></div>`).join("")}</div></div></section>` : ""}
+
+  ${upsell(b)}
+  <section class="band"><div class="wrap cols c2"><div class="rv"><p class="eyebrow">Questions fréquentes</p><h2 style="margin-top:14px">Achat et réception</h2></div><div class="rv">${faqHtml(FAQ)}</div></div></section>
+
+  <section><div class="wrap"><div class="final rv"><div><p class="eyebrow">${b.title}</p><h2 style="margin:12px 0 12px">${b.benefit}</h2>${priceHtml(b)}<p class="note" style="margin-top:10px">Téléchargement numérique · ${b.format}</p></div>${buyBtn(b)}</div>
+    <div style="margin-top:56px"><div class="sec-head"><p class="eyebrow">Dans la même collection</p></div><div class="grid">${BOOKS.filter(x => x.id !== b.id).sort((x, y) => (y.cat === b.cat) - (x.cat === b.cat)).slice(0, 4).map(card).join("")}</div></div></div></section>
+  <div class="buybar">${priceHtml(b)}${buyBtn(b, "btn-gold", "Acheter")}</div>`;
+}
+function upsell(b){
+  if (!["ia-qui-paie","revenus-ia"].includes(b.id)) return "";
+  const p = BOOKS.find(x => x.id === "pack-ia"), a = BOOKS.find(x => x.id === "ia-qui-paie"), r = BOOKS.find(x => x.id === "revenus-ia");
+  const sum = a.price + r.price;
+  return `<section style="padding-top:0"><div class="wrap"><div class="upsell rv"><div class="mini" aria-hidden="true">${cover(a)}${cover(r)}</div>
+    <div><p class="eyebrow">Offre groupée</p><h3 style="margin:8px 0 6px">${p.title} : les deux livres réunis</h3><p class="muted">${p.subtitle}. ${fcfa(p.price)} au lieu de ${fcfa(sum)} en achetant les deux livres séparément aux prix actuels.</p></div>
+    <div style="display:grid;gap:8px"><a class="btn btn-line btn-sm" href="#livre-${p.id}">Voir le pack</a>${buyBtn(p, "btn-gold btn-sm", "Acheter le pack")}</div></div></div></section>`;
+}
+const vNotFound = () => doc("Erreur", "Page introuvable", `<p class="lead">Cette page n'existe pas ou a été déplacée.</p><p style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-gold" href="#catalogue">Voir les e-books ${I.arrow}</a><a class="btn btn-line" href="#accueil">Retour à l'accueil</a></p>`);
+const doc = (eyebrow, title, html) => `<section class="doc"><div class="wrap"><p class="eyebrow">${eyebrow}</p><h1>${title}</h1>${html}</div></section>`;
+const PROV = t => `<p><span class="prov">À compléter</span> <span class="muted">${t}</span></p>`;
+const vAbout = () => doc("La maison", "À propos de Digital Wisdom", `
+  <p class="lead">Chez Digital Wisdom, nous croyons que le savoir est l'investissement le plus rentable.</p>
+  <h2>Ce que nous publions</h2><p>Des livres numériques et des outils pratiques : guides, plans d'action, tableaux Excel et modèles. Les sujets couvrent l'intelligence artificielle, la finance personnelle, l'entrepreneuriat, le marketing et l'éducation.</p>
+  <h2>Notre façon de faire</h2><ul><li>Des contenus écrits en français clair, lisibles sur téléphone.</li><li>Des exemples et des prix adaptés à l'Afrique francophone et à la diaspora.</li><li>Des descriptions honnêtes : nous indiquons ce que le livre contient et ce qu'il ne remplace pas.</li><li>Aucune promesse de revenus ni de résultats garantis.</li></ul>
+  <h2>Où acheter</h2><p>Les commandes et les paiements passent par notre boutique sur la plateforme Chariow. Chaque bouton « Acheter maintenant » de ce site mène à la page du livre correspondant.</p>
+  <p style="margin-top:26px"><a class="btn btn-gold" href="#catalogue">Découvrir nos livres ${I.arrow}</a></p>`);
+const vFaq = () => doc("Aide", "Questions fréquentes", `<div style="margin-top:10px">${faqHtml(FAQ)}</div><p style="margin-top:30px"><a class="btn btn-line" href="#contact">Poser une autre question ${I.arrow}</a></p>`);
+const vContact = () => doc("Assistance", "Contact", `
+  <p class="lead">Nous répondons sur WhatsApp. Indiquez le livre concerné et, si vous avez déjà commandé, l'adresse e-mail utilisée.</p>
+  <div class="tile" style="margin:26px 0"><div class="ic">${I.chat}</div><h3>WhatsApp</h3><p style="font-size:1.2rem;color:var(--paper)">${WHATSAPP.display}</p><p><a class="btn btn-gold" href="${WHATSAPP.link}" target="_blank" rel="noopener">Ouvrir WhatsApp ${I.arrow}</a></p></div>
+  <h2>Préparer votre message</h2><p class="muted">Remplissez les champs : le bouton ouvre WhatsApp avec votre message prêt à envoyer. Rien n'est envoyé depuis ce site.</p>
+  <form id="cform" style="display:grid;gap:16px;margin-top:18px" novalidate>
+    <div class="field"><label for="c-name">Votre prénom</label><input id="c-name" autocomplete="given-name"></div>
+    <div class="field"><label for="c-book">Livre concerné</label><select id="c-book"><option value="">Question générale</option>${BOOKS.map(b => `<option>${b.title}</option>`).join("")}</select></div>
+    <div class="field"><label for="c-msg">Votre question</label><textarea id="c-msg" rows="4"></textarea></div>
+    <a class="btn btn-gold" id="c-send" href="${WHATSAPP.link}" target="_blank" rel="noopener">Envoyer sur WhatsApp ${I.arrow}</a></form>`);
+const vCgv = () => doc("Informations légales", "Conditions générales de vente", `
+  ${PROV("identité légale du vendeur (nom ou raison sociale, adresse, pays d'immatriculation). Texte à faire valider selon le droit applicable.")}
+  <h2>1. Objet</h2><p>Les présentes conditions régissent la vente des produits numériques présentés sur ce site par Digital Wisdom.</p>
+  <h2>2. Produits</h2><p>Les produits sont des fichiers numériques (PDF, Excel, ZIP ou outils numériques). Leur format et leur contenu sont décrits sur chaque page. Aucun produit physique n'est expédié.</p>
+  <h2>3. Prix</h2><p>Les prix sont indiqués en francs CFA (XOF). Le prix applicable est celui affiché sur la page de commande Chariow au moment de l'achat.</p>
+  <h2>4. Commande et paiement</h2><p>La commande est passée sur la boutique Chariow de Digital Wisdom. Le paiement, par Mobile Money ou par carte, est traité par Chariow et ses prestataires. Ce site ne reçoit ni ne conserve vos données de paiement.</p>
+  <h2>5. Livraison</h2><p>L'accès au produit est fourni par voie numérique après la confirmation du paiement. Voir la page <a class="gold" href="#livraison">Livraison numérique</a>.</p>
+  <h2>6. Licence d'utilisation</h2><p>L'achat donne droit à un usage personnel. La revente, le partage public et la redistribution des fichiers sont interdits.</p>
+  <h2>7. Responsabilité</h2><p>Les livres ont une vocation éducative. Ils ne constituent pas un conseil juridique, financier ou médical personnalisé et ne garantissent aucun résultat.</p>
+  <h2>8. Contact</h2><p>WhatsApp : ${WHATSAPP.display}.</p>`);
+const vPrivacy = () => doc("Informations légales", "Politique de confidentialité", `
+  ${PROV("responsable du traitement et adresse de contact dédiée. Texte à faire valider selon le droit applicable.")}
+  <h2>Données collectées par ce site</h2><p>Ce site de présentation ne crée pas de compte client et ne collecte pas de données de paiement. Le formulaire de contact prépare seulement un message que vous envoyez vous-même par WhatsApp.</p>
+  <h2>Données liées à la commande</h2><p>Lors d'un achat, les informations que vous saisissez (nom, e-mail, numéro de téléphone, moyen de paiement) sont collectées et traitées par la plateforme Chariow, selon sa propre politique de confidentialité. Digital Wisdom y accède pour livrer le produit et assurer le support.</p>
+  <h2>Utilisation</h2><ul><li>Livrer le produit acheté.</li><li>Répondre à vos demandes d'assistance.</li><li>Respecter nos obligations légales.</li></ul>
+  <h2>Vos droits</h2><p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant sur WhatsApp au ${WHATSAPP.display}.</p>`);
+const vRefund = () => doc("Informations légales", "Politique de remboursement", `
+  ${PROV("politique provisoire, à valider par Digital Wisdom et à adapter à la législation applicable avant mise en ligne.")}
+  <h2>Produits numériques</h2><p>Les produits sont livrés sous forme de fichiers téléchargeables. Une fois le fichier accessible, il ne peut pas être « retourné » comme un produit physique.</p>
+  <h2>Dans quels cas nous intervenons</h2><ul><li>Le fichier est illisible ou endommagé.</li><li>Vous n'avez pas reçu l'accès après un paiement confirmé.</li><li>Le produit reçu ne correspond pas à la description de sa page.</li></ul>
+  <h2>Comment faire</h2><p>Contactez-nous sur WhatsApp au ${WHATSAPP.display} avec l'adresse e-mail de la commande et une description du problème. Nous commençons par renvoyer ou corriger le fichier. Si le problème ne peut pas être résolu, un remboursement est étudié.</p>
+  <h2>Avant d'acheter</h2><p>Lisez la description, le format et les avertissements de chaque page. En cas de doute, posez votre question avant de commander.</p>`);
+const vDelivery = () => doc("Informations", "Livraison numérique", `
+  <p class="lead">Tous nos produits sont numériques. Il n'y a ni frais de port ni délai postal.</p>
+  <h2>Comment cela se passe</h2><ul><li>Vous cliquez sur « Acheter maintenant » et finalisez la commande sur Chariow.</li><li>Après la confirmation du paiement, Chariow vous donne accès au téléchargement.</li><li>Vous ouvrez le fichier sur votre téléphone, votre tablette ou votre ordinateur.</li></ul>
+  <h2>Formats</h2><p>PDF pour les livres, Excel pour les tableaux, ZIP pour les packs de fichiers. Le format est indiqué sur chaque page produit.</p>
+  <h2>Un problème d'accès ?</h2><p>Écrivez-nous sur WhatsApp au ${WHATSAPP.display} avec l'adresse e-mail utilisée pour la commande.</p>`);
+
+/* ---------- Routeur (hash simple) ---------- */
+const ROUTES = { "accueil":["Digital Wisdom Librairie", vHome], "catalogue":["Nos e-books · Digital Wisdom", () => vCatalogue()], "a-propos":["À propos · Digital Wisdom", vAbout], "faq":["FAQ · Digital Wisdom", vFaq], "contact":["Contact · Digital Wisdom", vContact], "conditions":["Conditions générales · Digital Wisdom", vCgv], "confidentialite":["Confidentialité · Digital Wisdom", vPrivacy], "remboursement":["Remboursement · Digital Wisdom", vRefund], "livraison":["Livraison numérique · Digital Wisdom", vDelivery] };
+const NAV = [["accueil","Accueil"],["catalogue","Nos e-books"],["categories","Catégories"],["a-propos","À propos"],["faq","FAQ"],["contact","Contact"]];
+let current = null;
+function render(){
+  let h = (location.hash || "#accueil").slice(1), anchor = null, html, title, key = h;
+  if (h === "nouveautes" || h === "contenu" || h === "categories") { anchor = h; if (h !== "contenu") key = "accueil"; else key = current || "accueil"; }
+  if (key.startsWith("livre-")) { const b = BOOKS.find(x => x.id === key.slice(6)); if (b) { html = vBook(b); title = b.title + " · Digital Wisdom"; } }
+  else if (key.startsWith("cat-") && cat(key.slice(4))) { html = vCatalogue(key.slice(4)); title = cat(key.slice(4)).name + " · Digital Wisdom"; }
+  else if (ROUTES[key]) { title = ROUTES[key][0]; html = ROUTES[key][1](); }
+  if (!html) { title = "Page introuvable · Digital Wisdom"; html = vNotFound(); }
+  const app = $("#app");
+  if (key !== current) { app.innerHTML = `<div class="view">${html}</div>`; current = key; document.title = title; seo(key); wire(); if (!anchor) window.scrollTo(0, 0); }
+  document.body.classList.toggle("has-buybar", key.startsWith("livre-"));
+  if (anchor) { const t = anchor === "categories" ? document.querySelector(".cat-list") : document.getElementById(anchor); if (t) setTimeout(() => t.scrollIntoView({ behavior:"smooth", block:"start" }), 60); }
+  document.querySelectorAll("#nav a, #menu a.m").forEach(a => { const k = a.getAttribute("href").slice(1); const on = k === key || (k === "catalogue" && (key.startsWith("livre-") || key.startsWith("cat-"))); on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
+  closeMenu();
+}
+const DESC = { accueil:"Digital Wisdom : e-books et ressources numériques en français sur l'intelligence artificielle, la finance personnelle, le business et l'éducation. Téléchargement après paiement.", catalogue:"Tous les e-books Digital Wisdom : prix en FCFA, format indiqué, téléchargement numérique après paiement sur Chariow.", "a-propos":"Digital Wisdom publie des livres numériques pratiques pour l'Afrique francophone et la diaspora.", faq:"Questions fréquentes : achat, réception, formats et lecture des e-books Digital Wisdom.", contact:"Contacter Digital Wisdom sur WhatsApp." };
+function setMeta(sel, attr, val){ let m = document.head.querySelector(sel); if (!m) { m = document.createElement("meta"); const [k, v] = sel.match(/\[(\w+)="([^"]+)"\]/).slice(1); m.setAttribute(k, v); document.head.appendChild(m); } m.setAttribute(attr, val); }
+function seo(key){
+  const b = key.startsWith("livre-") && BOOKS.find(x => x.id === key.slice(6));
+  const c = key.startsWith("cat-") && cat(key.slice(4));
+  const d = b ? `${b.title} : ${b.subtitle}. ${b.desc} ${fcfa(b.price)}, ${b.format}.` : c ? `E-books ${c.name} de Digital Wisdom, en téléchargement numérique.` : (DESC[key] || DESC.accueil);
+  setMeta('meta[name="description"]', "content", d); setMeta('meta[property="og:description"]', "content", d); setMeta('meta[property="og:title"]', "content", document.title);
+  const org = { "@type":"Organization", name:"Digital Wisdom", url:STORE, contactPoint:{ "@type":"ContactPoint", telephone:WHATSAPP.display.replace(/\s/g, ""), contactType:"customer support" } };
+  const ld = b ? { "@context":"https://schema.org", "@type":"Product", name:b.title, description:b.desc, category:cat(b.cat).name, brand:{ "@type":"Brand", name:"Digital Wisdom" },
+      offers:{ "@type":"Offer", price:b.price, priceCurrency:"XOF", availability:"https://schema.org/InStock", url:buy(b), seller:org } }
+    : key === "faq" ? { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:FAQ.map(([q, a]) => ({ "@type":"Question", name:q, acceptedAnswer:{ "@type":"Answer", text:a } })) }
+    : Object.assign({ "@context":"https://schema.org" }, org);
+  $("#ld").textContent = JSON.stringify(ld);
+}
+function toast(t){ let el = $("#toast"); if (!el) { el = document.createElement("div"); el.id = "toast"; el.className = "toast"; el.setAttribute("role", "status"); document.body.appendChild(el); } el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2200); }
+function wire(){
+  const rm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!rm && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("rise"); io.unobserve(e.target); } }), { rootMargin:"0px 0px -8% 0px" });
+    document.querySelectorAll(".rv").forEach(el => io.observe(el));
+  }
+  const scene = $("#scene");
+  if (scene && !rm && matchMedia("(hover:hover)").matches) {
+    scene.parentElement.addEventListener("pointermove", e => { const r = scene.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; scene.style.transform = `rotateY(${x * 7}deg) rotateX(${-y * 5}deg)`; });
+    scene.parentElement.addEventListener("pointerleave", () => scene.style.transform = "");
+  }
+  const g = $("#cgrid");
+  if (g) {
+    const run = () => { const q = $("#q").value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""), so = $("#sort").value, f = g.dataset.filter;
+      let l = BOOKS.filter(b => (!f || b.cat === f) && (!q || [b.title, b.subtitle, b.desc, cat(b.cat).name].join(" ").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(q)));
+      if (so === "asc") l = l.slice().sort((a, b) => a.price - b.price); if (so === "desc") l = l.slice().sort((a, b) => b.price - a.price); if (so === "az") l = l.slice().sort((a, b) => a.title.localeCompare(b.title, "fr"));
+      g.innerHTML = l.length ? l.map(card).join("") : `<div class="empty" style="grid-column:1/-1">Aucun livre ne correspond à « ${q.replace(/[<>&"]/g, "")} ». Essayez un autre mot ou <a class="gold" href="#contact">demandez-nous conseil</a>.</div>`;
+      $("#count").textContent = `${l.length} résultat${l.length > 1 ? "s" : ""}`; };
+    $("#q").addEventListener("input", run); $("#sort").addEventListener("change", run); run();
+  }
+  document.querySelectorAll("[data-share]").forEach(btn => btn.addEventListener("click", async () => { try { await navigator.clipboard.writeText(location.href); toast("Lien copié"); } catch (e) { toast("Copie impossible : copiez l'adresse de la page"); } }));
+  const form = $("#cform");
+  if (form) { const upd = () => { const n = $("#c-name").value.trim(), b = $("#c-book").value, m = $("#c-msg").value.trim(); const t = `Bonjour Digital Wisdom${n ? ", je suis " + n : ""}.${b ? " Livre concerné : " + b + "." : ""}${m ? " " + m : ""}`; $("#c-send").href = WHATSAPP.link + "?text=" + encodeURIComponent(t); }; form.addEventListener("input", upd); form.addEventListener("submit", e => e.preventDefault()); upd(); }
+}
+function closeMenu(){ $("#menu").classList.remove("open"); $("#burger").setAttribute("aria-expanded", "false"); $("#burger").setAttribute("aria-label", "Ouvrir le menu"); }
+$("#burger").addEventListener("click", () => { const open = !$("#menu").classList.contains("open"); $("#menu").classList.toggle("open", open); $("#burger").setAttribute("aria-expanded", open); $("#burger").setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu"); });
+$("#nav").innerHTML = NAV.map(([k, l]) => `<a href="#${k}">${l}</a>`).join("");
+$("#menu").innerHTML = NAV.map(([k, l], i) => `<a class="m" href="#${k}">${l}<span>0${i + 1}</span></a>`).join("") + `<a class="btn btn-gold btn-block" href="#catalogue">Découvrir nos livres ${I.arrow}</a>`;
+$("#menu").addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
+$("#footer").innerHTML = `<div class="wrap"><div class="f-grid">
+  <div><a class="logo" href="#accueil"><span class="mono">DW</span>DIGITAL WISDOM</a><p style="margin-top:14px;max-width:34ch">Livres numériques et outils pratiques. Le savoir est le meilleur investissement.</p></div>
+  <div><h4>Catalogue</h4><ul><li><a href="#catalogue">Tous les e-books</a></li>${CATS.filter(c => BOOKS.some(b => b.cat === c.id)).map(c => `<li><a href="#cat-${c.id}">${c.name}</a></li>`).join("")}</ul></div>
+  <div><h4>Aide</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#livraison">Livraison numérique</a></li><li><a href="#contact">Contact</a></li><li><a href="${WHATSAPP.link}" target="_blank" rel="noopener">WhatsApp ${WHATSAPP.display}</a></li></ul></div>
+  <div><h4>Informations</h4><ul><li><a href="#a-propos">À propos</a></li><li><a href="#conditions">Conditions générales</a></li><li><a href="#confidentialite">Confidentialité</a></li><li><a href="#remboursement">Remboursement</a></li></ul></div></div>
+  <div class="f-end"><span>© ${new Date().getFullYear()} Digital Wisdom. Tous droits réservés.</span><span>Commandes et paiements traités par Chariow.</span></div></div>`;
+addEventListener("hashchange", render);
+addEventListener("scroll", () => $("#hdr").classList.toggle("solid", scrollY > 24), { passive:true });
+render();
+</script>
+</body>
+</html>
